@@ -1,0 +1,2 @@
+esptool
+adafruit-circuitpython-max1704x
