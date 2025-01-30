@@ -1,7 +1,7 @@
 package router
 
 import (
-	"api/pkg/logging"
+	"api/pkg/logging/services"
 
 	"github.com/gin-gonic/gin"
 )
@@ -9,7 +9,7 @@ import (
 func NewRouter() *gin.Engine {
 	router := gin.Default()
 
-	router.POST("/log/:room_id", logging.LogHandler)
+	router.POST("/log/:house_id", services.LogHouseStatusService.LogHouseStatus)
 
 	return router
 }

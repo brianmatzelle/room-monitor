@@ -1,5 +1,11 @@
 package models
 
+type HouseStatus struct {
+	HouseId string `json:"house_id"`
+
+	RoomStatuses []RoomStatus
+}
+
 // RoomStatus is the status of the room's environment,
 // as well as the PeripheralStatus(s) of the peripherals it manages
 type RoomStatus struct {
